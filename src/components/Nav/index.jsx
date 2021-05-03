@@ -34,7 +34,6 @@ export default function Nav() {
             <li>
               <NavLink to="/searchOne">SearchOne</NavLink>
             </li>
-            <li>Search</li>
           </ul>
         </nav>
         <hr />
@@ -48,6 +47,22 @@ export default function Nav() {
               Error!
             </button>
           </div>
+        </aside>
+        <aside>
+          <h3>Todo</h3>
+          <ul>
+            <li>Search</li>
+            <li>Modals (need Redux/reducers)</li>
+            <li>Gallery</li>
+            <li>Drawings</li>
+            <li>Private routes (need login)</li>
+            <li>Login (need Redux/reducers)</li>
+            <li>Form (react-hook-form ?)</li>
+            <li>Accessibility</li>
+            <li>API</li>
+            <li>Code refactoring</li>
+            <li>API centralization</li>
+          </ul>
         </aside>
       </SNav>
       <SButton type="button" onClick={toggle}>
