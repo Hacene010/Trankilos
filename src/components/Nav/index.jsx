@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Screen } from '..';
 import { SNav, SButton } from './style';
 
 export default function Nav() {
@@ -16,6 +17,7 @@ export default function Nav() {
   };
   return (
     <>
+      {isOpen && <Screen onClick={toggle} />}
       <SNav className={isOpen && 'open'}>
         <nav>
           <h2>Welcome, Stranger !</h2>
