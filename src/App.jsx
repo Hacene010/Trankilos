@@ -1,22 +1,26 @@
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Parallax from './components/Parallax';
+import SApp from './style';
+import { Parallax, Error404, SearchOne } from './components';
 
 function App() {
   return (
-    <>
+    <SApp>
       <Switch>
-        <Route path="/:lorem">
-          <Home />
-        </Route>
         <Route exact path="/">
           <Home />
         </Route>
         <Route exact path="/parallax">
           <Parallax />
         </Route>
+        <Route exact path="/searchone">
+          <SearchOne />
+        </Route>
+        <Route path="/">
+          <Error404 />
+        </Route>
       </Switch>
-    </>
+    </SApp>
   );
 }
 
