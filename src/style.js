@@ -6,5 +6,9 @@ const SApp = styled.div`
     align-items: center;
     justify-content: center;
   }
+  & .gallery {
+    display: flex;
+    flex-flow: row wrap;
+  }
 `;
 export default SApp;

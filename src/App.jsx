@@ -1,7 +1,10 @@
 import { Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './components/Home';
 import SApp from './style';
 import { Parallax, Error404, SearchOne } from './components';
+import Nav from './components/Nav';
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
           <Error404 />
         </Route>
       </Switch>
+      <Nav />
+      <ToastContainer position="bottom-right" />
     </SApp>
   );
 }
