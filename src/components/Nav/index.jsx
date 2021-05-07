@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Screen } from '..';
+import Screen from '..';
 import { SNav, SButton } from './style';
 
 export default function Nav() {
