@@ -34,6 +34,9 @@ export default function Nav() {
             <li>
               <NavLink to="/searchOne">SearchOne</NavLink>
             </li>
+            <li>
+              <NavLink to="/gallery">Gallery</NavLink>
+            </li>
           </ul>
         </nav>
         <hr />
