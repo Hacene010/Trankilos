@@ -33,6 +33,9 @@ export default function Nav() {
             <li>
               <NavLink to="/toasts">Toasts</NavLink>
             </li>
+            <li>
+              <NavLink to="/form">Forms</NavLink>
+            </li>
           </ul>
         </nav>
         <hr />
