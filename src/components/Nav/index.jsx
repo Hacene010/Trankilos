@@ -30,6 +30,9 @@ export default function Nav() {
             <li>
               <NavLink to="/gallery">Gallery</NavLink>
             </li>
+            <li>
+              <NavLink to="/toasts">Toasts</NavLink>
+            </li>
           </ul>
         </nav>
         <hr />
