@@ -2,7 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SApp from './style';
-import { Home, Parallax, Error404, SearchOne, Gallery } from './pages';
+import { Home, Toasts, Parallax, Error404, SearchOne, Gallery } from './pages';
 import Nav from './components/Nav';
 
 function App() {
@@ -20,6 +20,9 @@ function App() {
         </Route>
         <Route path="/gallery">
           <Gallery />
+        </Route>
+        <Route path="/toasts">
+          <Toasts />
         </Route>
         <Route path="/">
           <Error404 />

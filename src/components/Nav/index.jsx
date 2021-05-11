@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import Screen from '..';
 import { SNav, SButton } from './style';
 
@@ -8,12 +7,6 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
-  };
-  const alertSuccess = () => {
-    toast.success('Yay! \\o/');
-  };
-  const alertFailure = () => {
-    toast.error('Oh noez ! é_è');
   };
   return (
     <>
@@ -40,17 +33,6 @@ export default function Nav() {
           </ul>
         </nav>
         <hr />
-        <aside>
-          <h3>Toasts</h3>
-          <div>
-            <button type="button" onClick={alertSuccess}>
-              Toast!
-            </button>
-            <button type="button" onClick={alertFailure}>
-              Error!
-            </button>
-          </div>
-        </aside>
         <aside>
           <h3>Todo</h3>
           <ul>
