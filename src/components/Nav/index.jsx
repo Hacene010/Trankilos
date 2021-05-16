@@ -44,7 +44,6 @@ export default function Nav() {
           <ul>
             <li>Search</li>
             <li>Modals (need Redux/reducers)</li>
-            <li>Gallery</li>
             <li>Drawings</li>
             <li>Private routes (need login)</li>
             <li>Login (need Redux/reducers)</li>

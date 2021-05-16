@@ -10,6 +10,7 @@ import {
   SearchOne,
   Gallery,
   Form,
+  Search,
 } from './pages';
 import Nav from './components/Nav';
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path="/searchone">
           <SearchOne />
+        </Route>
+        <Route exact path="/search">
+          <Search />
         </Route>
         <Route path="/gallery">
           <Gallery />
