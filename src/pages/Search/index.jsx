@@ -4,7 +4,10 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import SSearch from './style';
 
-function Results({ loading, error, results }) {
+function Results({ loading, error, results, focus, query }) {
+  if (!focus || !query) {
+    return null;
+  }
   if (error) {
     return <>Error</>;
   }
@@ -35,12 +38,24 @@ export default function Search() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [focus, setFocus] = useState(false);
+
+  const handleFocus = () => {
+    setFocus(true);
+  };
+
+  const handleBlur = () => {
+    setFocus(false);
+  };
 
   const handleChange = (e) => {
     const newValue = e.target.value;
     setQuery(newValue);
     setError(false);
-    if (!newValue) return;
+    if (!newValue) {
+      setResults([]);
+      return;
+    }
 
     setLoading(true);
     axios
@@ -59,15 +74,29 @@ export default function Search() {
 
   return (
     <SSearch>
-      <input type="search" value={query} onChange={handleChange} />
+      <input
+        type="search"
+        value={query}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+      />
       <div className="searchResults">
-        <Results loading={loading} results={results} error={error} />
+        <Results
+          loading={loading}
+          results={results}
+          error={error}
+          focus={focus}
+          query={query}
+        />
       </div>
     </SSearch>
   );
 }
 Results.propTypes = {
   error: PropTypes.bool.isRequired,
+  focus: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
+  query: PropTypes.string.isRequired,
   results: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -8,16 +8,16 @@ const SSearch = styled.div`
     width: 100%;
     box-sizing: border-box;
   }
+
   .searchResults {
     position: absolute;
+    top: calc(1em + 4px);
+    left: 0;
     width: 100%;
-
-    border: 1px solid lightgrey;
     background-color: white;
     display: flex;
     align-items: center;
-    max-height: 60vh;
-    overflow-y: scroll;
+    line-height: 2em;
 
     ul {
       width: 100%;
