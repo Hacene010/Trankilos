@@ -22,7 +22,7 @@ const SSearch = styled.div`
     ul {
       width: 100%;
 
-      li:nth-of-type(2n) {
+      li:nth-of-type(2n + 1) {
         background-color: #eee;
       }
     }

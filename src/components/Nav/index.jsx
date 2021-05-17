@@ -28,6 +28,9 @@ export default function Nav() {
               <NavLink to="/searchOne">SearchOne</NavLink>
             </li>
             <li>
+              <NavLink to="/search">Search</NavLink>
+            </li>
+            <li>
               <NavLink to="/gallery">Gallery</NavLink>
             </li>
             <li>
@@ -42,14 +45,11 @@ export default function Nav() {
         <aside>
           <h3>Todo</h3>
           <ul>
-            <li>Search</li>
             <li>Modals (need Redux/reducers)</li>
             <li>Drawings</li>
             <li>Private routes (need login)</li>
             <li>Login (need Redux/reducers)</li>
-            <li>Form (react-hook-form ?)</li>
             <li>Accessibility</li>
-            <li>API</li>
             <li>Code refactoring</li>
             <li>API centralization</li>
           </ul>

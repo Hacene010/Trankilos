@@ -19,7 +19,7 @@ function Results({ loading, error, results, focus, query }) {
   }
   return (
     <ul>
-      {results.map((char) => {
+      {results.slice(0, 5).map((char) => {
         return (
           <li key={char.id}>
             <figure>
