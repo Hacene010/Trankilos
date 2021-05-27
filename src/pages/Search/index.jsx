@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import SSearch from './style';
 
 function Results({ loading, error, results, focus, query }) {
@@ -21,12 +22,17 @@ function Results({ loading, error, results, focus, query }) {
     <ul>
       {results.slice(0, 5).map((char) => {
         return (
-          <li key={char.id}>
-            <figure>
-              <img src="" alt="" />
-              <figcaption>{char.name}</figcaption>
-            </figure>
-          </li>
+          <Link to="https://google.com" key={char.id}>
+            <li>
+              <figure>
+                <img
+                  src={`http://localhost:5050${char.imgFolder}/1i.png`}
+                  alt=""
+                />
+                <figcaption>{char.name}</figcaption>
+              </figure>
+            </li>
+          </Link>
         );
       })}
     </ul>
@@ -45,7 +51,9 @@ export default function Search() {
   };
 
   const handleBlur = () => {
-    setFocus(false);
+    setTimeout(() => {
+      setFocus(false);
+    }, 100);
   };
 
   const handleChange = (e) => {

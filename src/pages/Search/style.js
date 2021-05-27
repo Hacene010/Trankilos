@@ -17,22 +17,28 @@ const SSearch = styled.div`
     background-color: white;
     display: flex;
     align-items: center;
-    line-height: 2em;
 
     ul {
       width: 100%;
 
-      li:nth-of-type(2n + 1) {
-        background-color: #eee;
+      li {
+        height: 3em;
       }
-    }
 
-    img {
-      height: 100%;
-    }
+      figure {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
 
-    figcaption {
-      margin-left: 1em;
+        img {
+          height: 3em;
+          width: 3em;
+        }
+
+        figcaption {
+          margin-left: 1em;
+        }
+      }
     }
   }
 `;
