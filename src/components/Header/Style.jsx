@@ -27,8 +27,6 @@ const SHeader = styled.div`
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: 600;
     text-align: center;
     margin: 0.2rem 0 0 -10rem;
 
