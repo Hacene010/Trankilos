@@ -15,9 +15,11 @@ export default function Header() {
 
       <div className="cacthPhrase">
         <h1>
-          NE RÉFLICHISSEZ PLUS, <br />
-          <span>
-            NOUS LE FAISONS POUR VOUS
+          <span className="firstPart">
+            NE RÉFLICHISSEZ PLUS, <br />
+          </span>
+          <span className="secondPart">
+            NOUS LE FAISONS POUR <span className="you">VOUS</span>
             <img src="/assets/img/emoji.jpeg" alt="emoji" />
           </span>
         </h1>
