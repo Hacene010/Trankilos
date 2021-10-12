@@ -1,6 +1,6 @@
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Footer from './entities/Footer/Footer';
+import Header from './entities/Header/Header';
+import Main from './pages/Main/Main';
 import SApp from './style';
 
 function App() {

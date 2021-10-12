@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SMain = styled.div`
+const SDishIntro = styled.div`
   width: 95vw;
   margin: auto;
   font-family: 'Filson Soft';
@@ -34,7 +34,11 @@ const SMain = styled.div`
         margin-top: -15vh;
         font-size: 2rem;
         transition: all 0.5s ease-out;
-        color: #f2f2f2;
+        z-index: 10;
+      }
+      img {
+        transition: 0.8s;
+        opacity: 0.5;
       }
     }
   }
@@ -43,16 +47,5 @@ const SMain = styled.div`
     margin: 5vh auto;
     width: 90vw;
   }
-
-  .desc {
-    margin-top: 8vh;
-    text-align: center;
-
-    p {
-      width: 70vw;
-      margin: auto;
-      padding: 2vh;
-    }
-  }
 `;
-export default SMain;
+export default SDishIntro;
