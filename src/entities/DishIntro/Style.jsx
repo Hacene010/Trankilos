@@ -1,51 +1,59 @@
 import styled from 'styled-components';
 
 const SDishIntro = styled.div`
-  width: 95vw;
-  margin: auto;
-  font-family: 'Filson Soft';
-  font-weight: 600;
+  margin-bottom: 10vh;
 
-  .dishes {
-    background-color: #ffff;
-    width: 80%;
+  .container {
+    width: 80vw;
     margin: auto;
-    padding: 5vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 
     article {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 450px;
+      padding: 1.3rem;
+
+      img,
+      h3 {
+        width: 100%;
+        height: 100%;
+      }
 
       img {
-        width: 20vw;
-        margin: 10px;
-        -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.86);
         box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.86);
         border-radius: 5px;
       }
-    }
 
-    article:hover {
-      h3 {
-        margin-top: -15vh;
-        font-size: 2rem;
-        transition: all 0.5s ease-out;
-        z-index: 10;
+      .title_img {
+        position: relative;
       }
-      img {
-        transition: 0.8s;
-        opacity: 0.5;
+
+      h3 {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .title_img:hover {
+        img {
+          transition: 0.3s;
+          opacity: 0.4;
+        }
+
+        h3 {
+          display: flex;
+          z-index: 10;
+        }
       }
     }
   }
 
   hr {
+    width: 80vw;
     margin: 5vh auto;
-    width: 90vw;
   }
 `;
 export default SDishIntro;

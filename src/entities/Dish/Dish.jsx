@@ -5,7 +5,10 @@ import SDish from './Style';
 const dishes = {
   id: 716429,
   title: 'Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs',
-  image: 'https://spoonacular.com/recipeImages/716429-556x370.jpg',
+  image:
+    'https://thumbs.dreamstime.com/b/west-african-food-assortment-west-african-food-concept-traditional-wset-african-dishes-assortment-peanut-soup-jollof-rice-grilled-136692172.jpg',
+  description:
+    ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ad dolorum voluptas debitis adipisci officiis, sunt accusantium maiores nemo ducimus cupiditate necessitatibus ut animi, veniam id enim .',
   imageType: 'jpg',
   servings: 2,
   readyInMinutes: 45,
@@ -339,14 +342,22 @@ export default function Dish() {
   return (
     <SDish>
       <article className="menus">
-        <h3>{dishes.title}</h3>
-        <figure>
-          <img src={dishes.image} alt="disgImage" />
-        </figure>
-        {/* <li className="desc">{dishes.summary}</li> */}
-        <div className="desc">
-          <p>Plat pour {dishes.servings} personnes</p>
+        <div className="title_img">
+          <h3>
+            <a href="https://css-tricks.com/snippets/css/text-rotation/">
+              {dishes.title}
+            </a>
+          </h3>
+          <img src={dishes.image} alt="dishImage" />
         </div>
+        <div className="description">
+          <p> {dishes.description}</p>
+        </div>
+
+        {/* <details>
+          <summary>Recette</summary>
+          <p> {dishes.description}</p>
+        </details> */}
       </article>
     </SDish>
   );
