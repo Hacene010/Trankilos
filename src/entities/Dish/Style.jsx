@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SDish = styled.article`
+const SDish = styled.div`
   article {
     display: flex;
     flex-direction: column;
