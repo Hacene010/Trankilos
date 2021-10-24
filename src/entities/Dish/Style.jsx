@@ -1,30 +1,61 @@
 import styled from 'styled-components';
 
-const SDish = styled.div`
-  display: flex;
-  background-color: gray;
-  padding: 15px;
-
+const SDish = styled.article`
   article {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+  }
+
+  .title_img {
+    position: relative;
+    margin: 1.2rem;
+  }
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
     align-items: center;
-    border: #f2f2f2 solid 1px;
-    width: 25vw;
+    text-align: center;
+
+    a {
+      color: #000;
+    }
+  }
+
+  img {
+    width: 100%;
+    width: 100%;
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.86);
+    border-radius: 5px;
+  }
+
+  .title_img:hover {
+    img {
+      transition: 0.3s;
+      opacity: 0.4;
+    }
 
     h3 {
-      text-align: center;
-      margin: 10px;
+      display: flex;
+      z-index: 10;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .description {
+      display: none;
     }
 
-    figure {
-      img {
-        width: 15vw;
-      }
+    article {
+      padding: 0;
     }
 
-    p {
-      width: 100%;
+    .title_img {
+      margin: 1rem;
     }
   }
 `;
