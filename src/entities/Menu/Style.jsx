@@ -1,29 +1,62 @@
 import styled from 'styled-components';
 
 const SMenus = styled.div`
-  .container {
-    display: grid;
-    grid-template-columns: 0.3fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas:
-      ' h3 h3'
-      'Lundi dish .'
-      '. . .'
-      '. . .'
-      '. . .'
-      '. . .'
-      '. . .'
-      '. . .';
+  .mobile__version {
+    display: none;
   }
 
-  .container > h3 {
-    grid-area: h3;
+  table {
+    width: 75vw;
+    background-color: #fff;
+    border: #f83333 1.5px solid;
+  }
+
+  tr,
+  td,
+  th {
+    border: #f83333 1.5px solid;
+    padding: 1.2rem;
+  }
+
+  .day {
+    vertical-align: middle;
+    padding: 0.2em;
+  }
+
+  th {
+    background-color: #fc4f4fdf;
+    color: #f2f2f2;
+  }
+
+  @media screen and (max-width: 600px) {
+    .mobile__version {
+      display: block;
+    }
+    .descktop__version {
+      display: none;
+    }
+
+    table {
+      width: 95vw;
+      margin: 0.3rem auto;
+      background-color: #fff;
+    }
+
+    .day {
+      vertical-align: middle;
+
+      aside {
+        padding: 0.5rem;
+      }
+    }
+
+    td {
+      padding: 0.5rem;
+    }
+
+    td > tr {
+      border: 0;
+    }
   }
 `;
 export default SMenus;
