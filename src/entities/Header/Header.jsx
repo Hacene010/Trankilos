@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import SHeader from './Style';
 
 export default function Header() {
@@ -5,7 +6,9 @@ export default function Header() {
     <SHeader>
       <section>
         <div className="logo">
-          <img src="/assets/img/Trankilos.gif" alt="logoTrankilos" />
+          <Link to="/">
+            <img src="/assets/img/Trankilos.gif" alt="logoTrankilos" />
+          </Link>
         </div>
         <div className="auth">
           <input type="button" value="Inscription" />
