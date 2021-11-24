@@ -2,17 +2,19 @@ import styled from 'styled-components';
 
 const SDish = styled.div`
   article {
+    width: 30vw;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    padding: 1.3rem;
   }
 
   .title_img {
+    width: 20rem;
+    height: 15rem;
     position: relative;
     margin: 1.2rem;
   }
 
-  h3 {
+  .mealName {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -20,15 +22,13 @@ const SDish = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    a {
-      color: #000;
-    }
+    color: #000;
+    text-decoration: underline;
   }
 
   img {
     width: 100%;
-    width: 100%;
+    height: 100%;
     box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.86);
     border-radius: 5px;
   }
@@ -39,19 +39,52 @@ const SDish = styled.div`
       opacity: 0.4;
     }
 
-    h3 {
+    .mealName {
       display: flex;
       z-index: 10;
     }
   }
 
+  .infos {
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .difficulties,
+    .timer {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      box-shadow: none;
+      width: 70px;
+      height: 35px;
+    }
+    p {
+      margin: 0.5rem;
+      font-weight: bolder;
+    }
+    span {
+      font-weight: 200;
+    }
+  }
+
   @media screen and (max-width: 600px) {
-    .description {
+    .infos {
       display: none;
+    }
+
+    .title_img {
+      img {
+        width: 100%;
+      }
     }
 
     article {
       padding: 0;
+      width: 100%;
     }
 
     .title_img {

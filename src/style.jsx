@@ -9,6 +9,10 @@ const SApp = styled.div`
     font-weight: 600;
   }
 
+  h2 {
+    font-size: 1.6rem;
+  }
+
   th,
   h3 {
     font-size: 1.3rem;
@@ -18,6 +22,11 @@ const SApp = styled.div`
   .center {
     display: flex;
     justify-content: center;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 
   @media screen and (max-width: 500px) {
