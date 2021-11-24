@@ -6,26 +6,39 @@ const SMenus = styled.div`
   }
 
   table {
-    width: 75vw;
+    max-width: 80vw;
     background-color: #fff;
-    border: #f83333 1.5px solid;
+    border: #cccaca 1.5px solid;
   }
 
-  tr,
-  td,
+  .diner {
+    display: flex;
+    justify-content: space-around;
+    background-color: #cccacac8;
+
+    th {
+      background-color: transparent;
+      border: transparent;
+    }
+  }
+
+  .row {
+    display: flex;
+    td {
+      border: #cccaca 1.5px solid;
+    }
+  }
+
   th {
-    border: #f83333 1.5px solid;
-    padding: 1.2rem;
+    border: #cccaca 1.5px solid;
+    padding: 0.6rem;
+    color: #1a1919;
+    background-color: #cccacac8;
   }
 
   .day {
     vertical-align: middle;
     padding: 0.2em;
-  }
-
-  th {
-    background-color: #fc4f4fdf;
-    color: #f2f2f2;
   }
 
   @media screen and (max-width: 600px) {
@@ -37,25 +50,27 @@ const SMenus = styled.div`
     }
 
     table {
-      width: 95vw;
+      max-width: 95vw;
       margin: 0.3rem auto;
       background-color: #fff;
     }
 
     .day {
+      padding: 0.7rem;
       vertical-align: middle;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
 
-      aside {
-        padding: 0.5rem;
-      }
+    .dishes {
+      width: 70vw;
+      display: flex;
+      flex-direction: column;
     }
 
     td {
       padding: 0.5rem;
-    }
-
-    td > tr {
-      border: 0;
+      border: #cccaca 1.5px solid;
     }
   }
 `;
