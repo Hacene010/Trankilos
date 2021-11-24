@@ -4,14 +4,15 @@ const SDishIntro = styled.div`
   margin-bottom: 10vh;
 
   .container {
-    width: 80vw;
+    width: 85vw;
     margin: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #fff;
 
     article {
-      width: 450px;
+      width: 15vw;
       padding: 1.3rem;
 
       img,
