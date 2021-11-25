@@ -35,8 +35,13 @@ const SDishDetails = styled.div`
   }
 
   h3 {
-    padding: 0.5rem;
-    margin: 0.5rem;
+    padding: 0.2rem;
+    margin: 0.3rem;
+
+    span {
+      font-weight: 500;
+      padding: 0%.2rem;
+    }
   }
 
   li {
@@ -46,6 +51,7 @@ const SDishDetails = styled.div`
   .description {
     align-self: flex-start;
     justify-self: center;
+    text-align: center;
     margin: auto;
     width: 50%;
     margin-top: 2.6rem;
@@ -59,8 +65,30 @@ const SDishDetails = styled.div`
     }
   }
 
-  .ingredients {
-    margin-top: -6rem;
+  .infos {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .difficulties,
+    .timer {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      padding: 0.2rem;
+    }
+
+    img {
+      box-shadow: none;
+      width: 60px;
+      height: 25px;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 200;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -84,12 +112,14 @@ const SDishDetails = styled.div`
       }
     }
 
-    .categoryArea {
-      display: flex;
-      align-items: center;
-      width: 100%;
+    .infos {
+      flex-direction: column;
+
       h3 {
-        color: #fc4f4f;
+      }
+      span {
+        font-size: 0.9rem;
+        font-weight: 200;
       }
     }
   }
