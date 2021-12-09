@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SHeader = styled.div`
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
   section {
     display: flex;
     justify-content: space-between;
@@ -9,29 +9,30 @@ const SHeader = styled.div`
 
   .logo {
     img {
-      height: 35vh;
+      height: 25vh;
     }
   }
   .auth {
+    height: 12vh;
+    margin: 4.7rem;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 120px;
+      opacity: 0.5;
+    }
+
     input {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
+      cursor: pointer;
+      padding: 5px;
+      margin: 10px;
+      height: 25px;
+      border-radius: 5px;
       border: none;
-      border-radius: 8px;
-      background-color: #fc4f4f;
-      color: #f2f2f2;
-      padding: 8px;
-      margin: 80px 30px 0px 0px;
-    }
-  }
-
-  .catchPhrase {
-    .secondPart {
-      margin-left: 20vw;
-    }
-
-    .firstPart {
-      margin-left: -15vw;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
   }
 
@@ -43,6 +44,13 @@ const SHeader = styled.div`
 
   h1 {
     text-align: center;
+    .firstPart {
+      margin-left: -20vw;
+    }
+
+    .secondPart {
+      margin-right: -17vw;
+    }
 
     img {
       width: 30px;
@@ -53,9 +61,14 @@ const SHeader = styled.div`
 
   @media screen and (max-width: 500px) {
     section {
-      flex-direction: column;
-      align-items: center;
       margin-bottom: 8px;
+      align-items: center;
+    }
+
+    .logo {
+      img {
+        height: 25vh;
+      }
     }
     .auth {
       display: flex;
