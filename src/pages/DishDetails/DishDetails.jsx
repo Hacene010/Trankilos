@@ -4,13 +4,15 @@ import axios from 'axios';
 
 import SDishDetails from './Style';
 
+require('dotenv').config();
+
 export default function DishDetails() {
   const [dish, setDish] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5050/dishes/${id}`)
+      .get(`${process.env.REACT_APP_API_URL}/dishes/${id}`)
       .then(({ data }) => {
         setDish(data[0]);
       })
@@ -50,7 +52,7 @@ export default function DishDetails() {
 
         <div className="description">
           <h3>Instructions </h3>
-          <p>{dish.instructions}</p>
+          <p>{dish?.instructions}</p>
         </div>
       </article>
     </SDishDetails>

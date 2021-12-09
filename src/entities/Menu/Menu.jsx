@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import dotenv from 'dotenv';
 import Dish from '../Dish/Dish';
 import SMenus from './Style';
 
@@ -18,7 +17,7 @@ export default function Menus() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5050/dishes`)
+      .get(`${process.env.REACT_APP_API_URL}/dishes`)
       .then(({ data }) => {
         setDishes(data);
       })

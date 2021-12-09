@@ -4,23 +4,23 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Header, Description, DishIntro, Menus } from '../../entities';
 import Button from '../../ui/DishDetailsBtn/Button';
-import DishDetails from '../DishDetails/DishDetails';
-import Login from '../Login/Login';
+// eslint-disable-next-line import/no-cycle
+import { DishDetails, LoginPage } from '..';
 
-import SMain from './Style';
+import SRouteCalls from './Style';
 
-export default function Main() {
+export default function RouteCalls() {
   const { id } = useSelector((state) => state.userReducer);
   const isLoggedIn = !!id;
 
   return (
-    <SMain>
+    <SRouteCalls>
       <ToastContainer position="top-center" />
 
       <Header />
       {!isLoggedIn && (
         <Switch>
-          <Route path="/login" component={Login} />
+          <Route path="/login" component={LoginPage} />
         </Switch>
       )}
       <DishIntro />
@@ -34,6 +34,6 @@ export default function Main() {
       )}
       <Route path="/dishes/:id" component={DishDetails} />
       <Description />
-    </SMain>
+    </SRouteCalls>
   );
 }
