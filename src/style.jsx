@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const SApp = styled.div`
   background-color: #fff7f7;
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   h1 {
     font-size: 2rem;

@@ -4,7 +4,8 @@ export default function Dish() {
   return (
     <SDescription>
       <h1>
-        A quoi répond l&apos;application : &quot;OnMangeQuoiCeSoir?&quot; ?
+        A quoi répond l&apos;application : OnMangeQuoiCeSoir?
+        &quot;TranKilos&quot; ?
       </h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa omnis

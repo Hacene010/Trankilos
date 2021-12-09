@@ -7,7 +7,7 @@ export default function DishIntro() {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5050/dishes`).then(({ data }) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/dishes`).then(({ data }) => {
       setDishes(data);
     });
   }, []);
@@ -20,7 +20,7 @@ export default function DishIntro() {
               <article className="menus" key={dish.id}>
                 <div className="title_img">
                   <Link to={`/dishes/${dish.id}`}>
-                    <h3>{dish.name}</h3>
+                    <h2>{dish.name}</h2>
                   </Link>
                   <img src={dish.img} alt="dishImage" />
                 </div>

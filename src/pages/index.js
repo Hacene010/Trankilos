@@ -1,3 +1,6 @@
-import Main from './Main/Main';
+// eslint-disable-next-line import/no-cycle
+import RouteCalls from './RoutesCalls/RouteCalls';
+import LoginPage from './Login/Login';
+import DishDetails from './DishDetails/DishDetails';
 
-export default { Main };
+export { RouteCalls, LoginPage, DishDetails };

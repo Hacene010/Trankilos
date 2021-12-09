@@ -16,7 +16,7 @@ const SDishIntro = styled.div`
       padding: 1.3rem;
 
       img,
-      h3 {
+      h2 {
         width: 100%;
         height: 100%;
       }
@@ -30,9 +30,12 @@ const SDishIntro = styled.div`
         position: relative;
       }
 
-      h3 {
+      h2 {
         position: absolute;
         display: none;
+        font-weight: 600;
+        color: #000;
+        text-decoration: underline;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -44,7 +47,7 @@ const SDishIntro = styled.div`
           opacity: 0.4;
         }
 
-        h3 {
+        h2 {
           display: flex;
           z-index: 10;
         }

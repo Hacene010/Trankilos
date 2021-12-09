@@ -50,7 +50,7 @@ const SFooter = styled.div`
 
     .sendBtn {
       cursor: pointer;
-      width: 8vw;
+      width: 5rem;
     }
   }
 

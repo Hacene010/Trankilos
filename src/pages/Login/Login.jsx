@@ -111,22 +111,12 @@ export default function LoginPage() {
                 placeholder="votre nom..."
               />
             </label>
-            <label htmlFor="sex">
-              Sexe :
-              <input
-                type="bool"
-                id="sex"
-                name="sex"
-                onChange={handleChange}
-                placeholder="Vous êtes..."
-              />
-            </label>
           </div>
         )}
         <input
           type="submit"
           className="signUpBtn"
-          value={form.haveAccount ? 'Login' : 'Sign up'}
+          value={form.haveAccount ? 'Se connecter' : "S'inscrire"}
         />
       </form>
     </SLogin>

@@ -24,6 +24,10 @@ const SDishDetails = styled.div`
       margin: 1.2rem auto;
     }
 
+    h2 {
+      font-weight: 600;
+    }
+
     .categoryArea {
       align-self: flex-start;
 
@@ -58,6 +62,7 @@ const SDishDetails = styled.div`
     padding: 0.3rem;
 
     p {
+      white-space: pre-line;
       align-self: flex-start;
       margin: 0.5rem;
       padding: 0.2rem;
@@ -75,14 +80,14 @@ const SDishDetails = styled.div`
     .timer {
       display: flex;
       align-items: center;
-      height: 30px;
+      height: 35px;
       padding: 0.2rem;
     }
 
     img {
       box-shadow: none;
       width: 60px;
-      height: 25px;
+      height: 35px;
     }
 
     span {

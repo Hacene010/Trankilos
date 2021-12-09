@@ -46,7 +46,7 @@ const SLogin = styled.div`
 
     .signUpBtn {
       cursor: pointer;
-      width: 5rem;
+      width: 8rem;
     }
   }
 

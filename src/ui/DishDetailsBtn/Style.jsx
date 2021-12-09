@@ -4,8 +4,9 @@ const SButton = styled.div`
   display: flex;
   justify-content: center;
   margin: 0.5rem auto;
+
   input {
-    margin: auto 0.1rem;
+    margin: auto 0.3rem;
     cursor: pointer;
     border: none;
     border-radius: 8px 8px 0px 0px;
